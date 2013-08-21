@@ -16,7 +16,7 @@ class Analytics
     @options << { menu_id: 6, menu_title: 'Exit', method: :exit }
   end
 
-  ef run(choice)
+  def run(choice)
     opt = @options.select {|o| o[:menu_id] == choice }.first
     if opt.nil?
       p "Invalid choice"
